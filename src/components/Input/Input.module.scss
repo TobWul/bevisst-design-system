@@ -1,0 +1,54 @@
+@import "../../styles/variables";
+
+.wrapper {
+    margin-bottom: 1rem;
+
+    * {
+        font-size: 1rem;
+    }
+}
+
+.label {
+    display: block;
+
+    span {
+        color: $color-danger-600;
+        margin-left: 2px;
+    }
+}
+
+.input {
+    outline: 0;
+    height: 2rem;
+    padding: 0 0.5rem;
+    border-radius: $main-border-radius;
+    border: 1px solid $color-grays-500;
+
+    &:hover {
+        border-color: $color-grays-700;
+    }
+
+    &:focus {
+        border-color: $color-primary-600;
+    }
+
+    &:disabled {
+        background-color: $color-grays-200;
+        color: $color-grays-500;
+    }
+
+    &.error {
+        border-color: $color-danger-700;
+    }
+}
+
+textarea.input {
+    resize: vertical;
+    padding-top: 0.5rem;
+    min-height: 4rem;
+}
+
+
+.errorMessage {
+    color: $color-danger-700;
+}

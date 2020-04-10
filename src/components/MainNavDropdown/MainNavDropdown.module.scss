@@ -1,0 +1,13 @@
+@import "../../styles/variables";
+
+.wrapper {
+    background-color: $color-grays-300;
+    box-shadow: $depth-1;
+    padding: 0.5rem 1rem;
+    margin-bottom: 2rem;
+    color: $color-ledelse-800;
+
+    * {
+        margin: 0;
+    }
+}

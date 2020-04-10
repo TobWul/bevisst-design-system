@@ -1,0 +1,8 @@
+@import "../../styles/variables";
+
+.card {
+    background-color: $color-grays-white;
+    box-shadow: $depth-1;
+    max-height: 30vw;
+    padding: 2rem;
+}

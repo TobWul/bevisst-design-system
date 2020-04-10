@@ -1,0 +1,46 @@
+@import "../../styles/variables";
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding: 1rem;
+    background-color: $color-grays-200;
+    width: $sidebar-width;
+    padding-top: 4rem;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        text-align: left;
+        padding: 1rem 1rem 1rem 1.5rem;
+        cursor: pointer;
+        position: relative;
+        margin-bottom: 1rem;
+
+        &.selected,
+        &:hover {
+            background-color: $color-grays-300;
+            border-radius: $main-border-radius;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 8px;
+                height: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 4px;
+                border-radius: $main-border-radius;
+                background: $color-ledelse-500;
+            }
+        }
+
+
+    }
+}

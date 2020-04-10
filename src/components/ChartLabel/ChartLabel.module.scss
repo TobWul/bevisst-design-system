@@ -1,0 +1,21 @@
+@import "../../styles/variables";
+
+.label {
+    border-radius: $main-border-radius;
+    border: 1px solid $color-grays-400;
+    padding: 2px 4px;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 0.5rem;
+
+    .color {
+        border-radius: 2px;
+        width: 0.5rem;
+        height: 0.5rem;
+        margin-right: 4px;
+    }
+
+    * {
+        display: inline-block;
+    }
+}

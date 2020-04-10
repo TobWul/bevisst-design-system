@@ -1,0 +1,146 @@
+$color-primary-100: rgba(209, 232, 255, 1);
+$color-primary-200: rgba(172, 212, 252, 1);
+$color-primary-300: rgba(114, 179, 243, 1);
+$color-primary-400: rgba(80, 157, 231, 1);
+$color-primary-500: rgba(48, 131, 213, 1);
+$color-primary-600: rgba(19, 106, 190, 1);
+$color-primary-700: rgba(0, 80, 158, 1);
+$color-primary-800: rgba(0, 54, 107, 1);
+$color-primary-900: rgba(0, 34, 66, 1);
+$color-grays-white: rgba(255, 255, 255, 1);
+$color-grays-100: rgba(248, 250, 252, 1);
+$color-grays-200: rgba(238, 242, 247, 1);
+$color-grays-300: rgba(227, 232, 239, 1);
+$color-grays-400: rgba(205, 213, 223, 1);
+$color-grays-500: rgba(163, 174, 191, 1);
+$color-grays-600: rgba(116, 128, 148, 1);
+$color-grays-700: rgba(76, 85, 103, 1);
+$color-grays-800: rgba(47, 55, 71, 1);
+$color-grays-900: rgba(27, 32, 43, 1);
+$color-ledelse-100: rgba(244, 216, 232, 1);
+$color-ledelse-200: rgba(235, 179, 217, 1);
+$color-ledelse-300: rgba(211, 134, 194, 1);
+$color-ledelse-400: rgba(180, 97, 169, 1);
+$color-ledelse-500: rgba(139, 54, 136, 1);
+$color-ledelse-600: rgba(92, 31, 105, 1);
+$color-ledelse-700: rgba(67, 21, 84, 1);
+$color-ledelse-800: rgba(49, 13, 69, 1);
+$color-ledelse-900: rgba(49, 13, 69, 1);
+$color-success-100: rgba(236, 250, 216, 1);
+$color-success-200: rgba(215, 245, 179, 1);
+$color-success-300: rgba(181, 231, 138, 1);
+$color-success-400: rgba(148, 208, 105, 1);
+$color-success-500: rgba(106, 180, 68, 1);
+$color-success-600: rgba(84, 154, 54, 1);
+$color-success-700: rgba(64, 129, 43, 1);
+$color-success-800: rgba(48, 104, 32, 1);
+$color-success-900: rgba(36, 85, 24, 1);
+$color-warning-100: rgba(255, 251, 216, 1);
+$color-warning-200: rgba(254, 247, 179, 1);
+$color-warning-300: rgba(253, 241, 143, 1);
+$color-warning-400: rgba(252, 235, 119, 1);
+$color-warning-500: rgba(251, 226, 87, 1);
+$color-warning-600: rgba(215, 190, 71, 1);
+$color-warning-700: rgba(179, 157, 56, 1);
+$color-warning-800: rgba(144, 124, 42, 1);
+$color-warning-900: rgba(119, 101, 33, 1);
+$color-danger-100: rgba(252, 232, 214, 1);
+$color-danger-200: rgba(247, 202, 174, 1);
+$color-danger-300: rgba(243, 167, 133, 1);
+$color-danger-400: rgba(240, 135, 102, 1);
+$color-danger-500: rgba(237, 85, 57, 1);
+$color-danger-600: rgba(203, 59, 44, 1);
+$color-danger-700: rgba(169, 41, 35, 1);
+$color-danger-800: rgba(136, 30, 32, 1);
+$color-danger-900: rgba(113, 23, 32, 1);
+
+$main-border-radius: 4px;
+
+$depth-1: 0px 0.3px 0.9px rgba(0, 0, 0, 0.108),
+0px 1.6px 3.6px rgba(0, 0, 0, 0.132);
+$depth-2: 0px 0.6px 1.8px rgba(0, 0, 0, 0.108),
+0px 3.2px 7.2px rgba(0, 0, 0, 0.132);
+$depth-3: 0px 1.2px 3.6px rgba(0, 0, 0, 0.108),
+0px 6.4px 14.4px rgba(0, 0, 0, 0.132);
+$depth-4: 0px 4.8px 14.4px rgba(0, 0, 0, 0.18),
+0px 25.6px 57.6px rgba(0, 0, 0, 0.22);
+
+$sidebar-width: 200px;
+
+
+@mixin font-headline-1 {
+    font-size: 64px;
+    font-family: "Inter";
+    font-weight: normal;
+    line-height: 120.00000476837158px;
+}
+
+@mixin font-headline-2 {
+    font-size: 48px;
+    font-family: "Inter";
+    font-weight: normal;
+    line-height: 120.00000476837158px;
+}
+
+@mixin font-headline-3 {
+    font-size: 36px;
+    font-family: "Inter";
+    font-weight: normal;
+    line-height: 120.00000476837158px;
+}
+
+@mixin font-headline-4 {
+    font-size: 24px;
+    font-family: "Inter";
+    font-weight: normal;
+    line-height: 120.00000476837158px;
+}
+
+@mixin font-subtitle-1 {
+    font-size: 16px;
+    font-family: "Inter";
+    font-weight: normal;
+    line-height: 139.9999976158142px;
+}
+
+@mixin font-subtitle-2 {
+    font-size: 14px;
+    font-family: "Inter";
+    font-weight: semi bold;
+    line-height: 139.9999976158142px;
+}
+
+@mixin font-body-1 {
+    font-size: 16px;
+    font-family: "Inter";
+    font-weight: normal;
+    line-height: 160.0000023841858px;
+}
+
+@mixin font-body-2 {
+    font-size: 14px;
+    font-family: "Inter";
+    font-weight: normal;
+    line-height: 160.0000023841858px;
+}
+
+@mixin font-button {
+    font-size: 14px;
+    font-family: "Inter";
+    font-weight: semi bold;
+    line-height: 32px;
+}
+
+@mixin font-caption {
+    font-size: 12px;
+    font-family: "Inter";
+    font-weight: normal;
+    line-height: 139.9999976158142px;
+}
+
+@mixin font-overline {
+    font-size: 10px;
+    font-family: "Inter";
+    font-weight: normal;
+    line-height: 139.9999976158142px;
+}

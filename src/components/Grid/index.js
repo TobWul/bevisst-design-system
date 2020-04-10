@@ -1,7 +1,10 @@
 import React from 'react'
 import styles from './Grid.module.scss'
-const Grid = ({ children }) => {
-  return <div className={styles.grid}>{children}</div>
+import { cn } from '../../lib/helpers'
+const Grid = ({ children, type }) => {
+  return (
+    <div className={cn(styles.grid, styles[`grid${type}`])}>{children}</div>
+  )
 }
 
 export default Grid

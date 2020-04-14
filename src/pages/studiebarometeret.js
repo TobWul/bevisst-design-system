@@ -1,81 +1,103 @@
 import React from 'react'
 import Grid from '../components/Grid'
 import LargeChart from '../components/LargeChart'
+import { yearLabels } from '../lib/helpers'
 
 const Studiebarometeret = () => {
-  const sokere = {
+  const totalSatisfaction = {
     type: 'line',
     datasets: [
       {
         label: {
-          name: 'Jenter',
+          name: '2. studieår',
           color: '#3083D5'
         },
-        data: [3800, 5500, 6000, 4500, 5300, 6300, 7200, 8100]
+        data: [4.08, 4.13, 4.02, 3.94, 4.01, 4.02]
       },
       {
         label: {
-          name: 'Gutter',
+          name: '5. studieår',
           color: '#8B3688'
         },
-        data: [4500, 4500, 3000, 2500, 4300, 3300, 2200, 5100]
+        data: [4.57, 4.25, 4.23, 4.0, 4.28, 4.42]
       }
     ],
-    x: [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+    x: yearLabels(2014, 2019)
   }
-  const primary = {
+  const desiredStudyProgram = {
     type: 'line',
     datasets: [
       {
         label: {
-          name: 'Jenter',
+          name: '2. studieår',
           color: '#3083D5'
         },
-        data: [3800, 5500, 6000, 4500, 5300, 6300, 7200, 8100]
+        data: [4.3, 4.4, 4.19, 4.29, 4.27, 4.39]
       },
       {
         label: {
-          name: 'Gutter',
+          name: '5. studieår',
           color: '#8B3688'
         },
-        data: [4500, 4500, 3000, 2500, 4300, 3300, 2200, 5100]
+        data: [4.74, 4.65, 4.67, 4.6, 4.6, 4.66]
       }
     ],
-    x: [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+    x: yearLabels(2014, 2019)
   }
-  const gender = {
-    type: 'stacked',
+
+  const timeUsed = {
+    type: 'bar',
     datasets: [
       {
         label: {
-          name: 'Gutter',
+          name: '2. studieår',
           color: '#8B3688'
         },
-        data: [4500, 4500, 3000, 2500, 4300, 3300, 2200, 5100]
+        data: [14.32, 13.73, 14.08, 12.44, 11.59, 12.64]
       },
       {
         label: {
-          name: 'Jenter',
+          name: '5. studieår',
           color: '#3083D5'
         },
-        data: [3800, 5500, 6000, 4500, 5300, 6300, 7200, 8100]
+        data: [23.81, 23.29, 23.46, 24.06, 23.84, 22.81]
       }
     ],
-    x: [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+    x: yearLabels(2014, 2019)
+  }
+  const indexes = {
+    type: 'bar',
+    datasets: [
+      {
+        label: {
+          name: '2. studieår',
+          color: '#8B3688'
+        },
+        data: [14.32, 13.73, 14.08, 12.44, 11.59, 12.64]
+      },
+      {
+        label: {
+          name: '5. studieår',
+          color: '#3083D5'
+        },
+        data: [23.81, 23.29, 23.46, 24.06, 23.84, 22.81]
+      }
+    ],
+    x: yearLabels(2014, 2019)
   }
   return (
     <>
-      <Grid type={3}>
-        <LargeChart data={sokere} title="totalt antall søkere over tid" />
-        <LargeChart data={primary} title="antall primærsøkere per opptaksår" />
+      <Grid type={2}>
+        <LargeChart data={totalSatisfaction} title="Alt i alt tilfredshet" />
         <LargeChart
-          data={gender}
-          title="Kjønnsofordeling for primærsøkere over tid"
+          data={desiredStudyProgram}
+          title="Går på studieprogrammet jeg helst vil gå på"
         />
         <LargeChart
-          data={gender}
-          title="Kjønnsofordeling for primærsøkere over tid"
+          data={timeUsed}
+          title="Gjennomsnittlig tidsbruk organisert aktivitet og egeninnsats"
         />
+        {/* <LargeChart data={indexes} title="Indekser" /> */}
       </Grid>
     </>
   )

@@ -8,60 +8,59 @@ const Sokning = () => {
     datasets: [
       {
         label: {
-          name: 'Jenter',
+          name: 'Antall søkere',
           color: '#3083D5'
         },
-        data: [3800, 5500, 6000, 4500, 5300, 6300, 7200, 8100]
-      },
-      {
-        label: {
-          name: 'Gutter',
-          color: '#8B3688'
-        },
-        data: [4500, 4500, 3000, 2500, 4300, 3300, 2200, 5100]
+        data: [12714, 13516, 14984]
       }
     ],
-    x: [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+    x: [2017, 2018, 2019]
   }
   const primary = {
     type: 'line',
     datasets: [
       {
         label: {
-          name: 'Jenter',
+          name: 'Antall primærsøkere',
           color: '#3083D5'
         },
-        data: [3800, 5500, 6000, 4500, 5300, 6300, 7200, 8100]
-      },
-      {
-        label: {
-          name: 'Gutter',
-          color: '#8B3688'
-        },
-        data: [4500, 4500, 3000, 2500, 4300, 3300, 2200, 5100]
+        data: [2667, 3089, 3336]
       }
     ],
-    x: [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+    x: [2017, 2018, 2019]
   }
   const gender = {
     type: 'stacked',
     datasets: [
       {
         label: {
-          name: 'Gutter',
+          name: 'Jenter',
           color: '#8B3688'
         },
-        data: [4500, 4500, 3000, 2500, 4300, 3300, 2200, 5100]
+        data: [21, 26, 30]
       },
       {
         label: {
-          name: 'Jenter',
+          name: 'Gutter',
           color: '#3083D5'
         },
-        data: [3800, 5500, 6000, 4500, 5300, 6300, 7200, 8100]
+        data: [79, 74, 70]
       }
     ],
-    x: [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+    x: [2017, 2018, 2019]
+  }
+  const andel = {
+    type: 'line',
+    datasets: [
+      {
+        label: {
+          name: 'Andel primærsøkere av møtte studenter over tid',
+          color: '#3083D5'
+        },
+        data: [79, 74, 70]
+      }
+    ],
+    x: [2017, 2018, 2019]
   }
   return (
     <Grid>
@@ -73,7 +72,7 @@ const Sokning = () => {
       />
       <LargeChart
         type="line"
-        data={sokere}
+        data={andel}
         title="andel primærsøkere av møtte studenter over tid"
       />
     </Grid>

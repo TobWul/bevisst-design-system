@@ -25,6 +25,23 @@ const ChartConstructor = ({ data }) => {
 
   useEffect(() => {
     const ctx = document.getElementById(id).getContext('2d')
+    data.datasets = data.datasets.map((set, index) => ({
+      pointStyle: [
+        'circle',
+        'cross',
+        'crossRot',
+        'dash',
+        'line',
+        'rect',
+        'rectRounded',
+        'rectRot',
+        'star',
+        'triangle'
+      ][index],
+      ...set
+    }))
+    console.log(data.datasets)
+
     const chart = new Chart(ctx, {
       type: type,
       responsive: true,
@@ -34,6 +51,11 @@ const ChartConstructor = ({ data }) => {
         datasets: datasets
       },
       options: {
+        elements: {
+          line: {
+            tension: 0
+          }
+        },
         defaultFontFamily: "'Inter', sans-serif",
         defaultFontColor: '#A3A3A3',
         scales: {
@@ -53,7 +75,8 @@ const ChartConstructor = ({ data }) => {
               gridLines: { color: '#F0F0F0' },
               ticks: {
                 fontFamily: "'Inter', sans-serif",
-                fontColor: '#A3A3A3'
+                fontColor: '#A3A3A3',
+                beginAtZero: true
               }
             }
           ]

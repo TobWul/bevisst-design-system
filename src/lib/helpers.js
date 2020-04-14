@@ -5,3 +5,11 @@ export const randomString = length =>
     .substr(0, length)
 
 export const cn = (...classes) => classes.join(' ')
+
+export const yearLabels = (startYear, endYear) => {
+  const years = []
+  for (let i = startYear; i < endYear + 1; i++) {
+    years.push(i)
+  }
+  return years
+}

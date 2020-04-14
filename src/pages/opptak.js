@@ -3,7 +3,33 @@ import Grid from '../components/Grid'
 import LargeChart from '../components/LargeChart'
 
 const Opptak = () => {
-  const sokere = {
+  const totalApplicants = {
+    type: 'line',
+    datasets: [
+      {
+        label: {
+          name: 'Antall lokale søkere',
+          color: '#3083D5'
+        },
+        data: [5027, 4933, 4661]
+      }
+    ],
+    x: [2017, 2018, 2019]
+  }
+  const primaryApplicants = {
+    type: 'line',
+    datasets: [
+      {
+        label: {
+          name: 'Antall lokale primærsøkere',
+          color: '#3083D5'
+        },
+        data: [3051, 2728, 2680]
+      }
+    ],
+    x: [2017, 2018, 2019]
+  }
+  const localApplicantsMasters = {
     type: 'line',
     datasets: [
       {
@@ -11,19 +37,12 @@ const Opptak = () => {
           name: 'Jenter',
           color: '#3083D5'
         },
-        data: [3800, 5500, 6000, 4500, 5300, 6300, 7200, 8100]
-      },
-      {
-        label: {
-          name: 'Gutter',
-          color: '#8B3688'
-        },
-        data: [4500, 4500, 3000, 2500, 4300, 3300, 2200, 5100]
+        data: [4454, 4329, 3994]
       }
     ],
-    x: [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+    x: [2017, 2018, 2019]
   }
-  const primary = {
+  const masters = {
     type: 'line',
     datasets: [
       {
@@ -31,46 +50,29 @@ const Opptak = () => {
           name: 'Jenter',
           color: '#3083D5'
         },
-        data: [3800, 5500, 6000, 4500, 5300, 6300, 7200, 8100]
-      },
-      {
-        label: {
-          name: 'Gutter',
-          color: '#8B3688'
-        },
-        data: [4500, 4500, 3000, 2500, 4300, 3300, 2200, 5100]
+        data: [2508, 2153, 2059]
       }
     ],
-    x: [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
-  }
-  const gender = {
-    type: 'stacked',
-    datasets: [
-      {
-        label: {
-          name: 'Gutter',
-          color: '#8B3688'
-        },
-        data: [4500, 4500, 3000, 2500, 4300, 3300, 2200, 5100]
-      },
-      {
-        label: {
-          name: 'Jenter',
-          color: '#3083D5'
-        },
-        data: [3800, 5500, 6000, 4500, 5300, 6300, 7200, 8100]
-      }
-    ],
-    x: [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+    x: [2017, 2018, 2019]
   }
   return (
     <>
-      <Grid type={2}>
-        <LargeChart data={sokere} title="totalt antall søkere over tid" />
-        <LargeChart data={primary} title="antall primærsøkere per opptaksår" />
+      <Grid type={1}>
         <LargeChart
-          data={gender}
-          title="Kjønnsofordeling for primærsøkere over tid"
+          data={totalApplicants}
+          title="Utvikling i totalt antall lokale søkere over tid"
+        />
+        <LargeChart
+          data={primaryApplicants}
+          title="Utvikling i antall lokale primærsøkere per opptaksår"
+        />
+        <LargeChart
+          data={localApplicantsMasters}
+          title="Utvikling i antall lokale søkere på 2-årig Mastergrad over tid"
+        />
+        <LargeChart
+          data={masters}
+          title="Utvikling i antall lokale primærsøkere på 2-årig Mastergrad per opptaksår"
         />
       </Grid>
     </>

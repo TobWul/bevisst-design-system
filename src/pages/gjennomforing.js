@@ -1,6 +1,7 @@
 import React from 'react'
 import Grid from '../components/Grid'
 import LargeChart from '../components/LargeChart'
+import { yearLabels } from '../lib/helpers'
 
 const Gjennomforing = () => {
   const sokere = {
@@ -8,73 +9,54 @@ const Gjennomforing = () => {
     datasets: [
       {
         label: {
-          name: 'Jenter',
+          name: 'Antall med studentstatus fullført',
           color: '#3083D5'
         },
-        data: [3800, 5500, 6000, 4500, 5300, 6300, 7200, 8100]
-      },
-      {
-        label: {
-          name: 'Gutter',
-          color: '#8B3688'
-        },
-        data: [4500, 4500, 3000, 2500, 4300, 3300, 2200, 5100]
+        data: [1018, 1114, 1158, 1155, 1008, 722, 763]
       }
     ],
-    x: [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+    x: yearLabels(2010, 2016)
   }
-  const primary = {
+  const timeToFinish = {
     type: 'line',
     datasets: [
       {
         label: {
-          name: 'Jenter',
+          name: 'Antal studenter med studentstatus fullført',
           color: '#3083D5'
         },
-        data: [3800, 5500, 6000, 4500, 5300, 6300, 7200, 8100]
-      },
-      {
-        label: {
-          name: 'Gutter',
-          color: '#8B3688'
-        },
-        data: [4500, 4500, 3000, 2500, 4300, 3300, 2200, 5100]
+        data: [136, 151, 262, 74, 112, 33, 6, 4, 2]
       }
     ],
-    x: [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+    x: yearLabels(1, 9).map(year => year + ' år')
   }
-  const gender = {
-    type: 'stacked',
+  const kandidatproduksjon = {
+    type: 'line',
     datasets: [
       {
         label: {
-          name: 'Gutter',
-          color: '#8B3688'
-        },
-        data: [4500, 4500, 3000, 2500, 4300, 3300, 2200, 5100]
-      },
-      {
-        label: {
-          name: 'Jenter',
+          name: 'Antall kandidater',
           color: '#3083D5'
         },
-        data: [3800, 5500, 6000, 4500, 5300, 6300, 7200, 8100]
+        data: [748, 831, 504]
       }
     ],
-    x: [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+    x: yearLabels(2017, 2019)
   }
   return (
     <>
-      <Grid type={3}>
-        <LargeChart data={sokere} title="totalt antall søkere over tid" />
-        <LargeChart data={primary} title="antall primærsøkere per opptaksår" />
+      <Grid type={2}>
         <LargeChart
-          data={gender}
-          title="Kjønnsofordeling for primærsøkere over tid"
+          data={sokere}
+          title="Antall fullførte kandidater over tid (etter startår)"
         />
         <LargeChart
-          data={gender}
-          title="Kjønnsofordeling for primærsøkere over tid"
+          data={timeToFinish}
+          title="Hvor mange år brker studentene på å fullføre?"
+        />
+        <LargeChart
+          data={kandidatproduksjon}
+          title="Kandidatproduksjon total"
         />
       </Grid>
     </>

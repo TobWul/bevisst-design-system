@@ -7,7 +7,15 @@ import CalculateDropdown from '../CalculateDropdown'
 import styles from './LargeChart.module.scss'
 
 const LargeChart = ({ data, title }) => {
-  const calculationData = data.datasets.reduce((a, b) => a.data.concat(b.data))
+  console.log(data.datasets[0].data)
+
+  const calculationData =
+    data.datasets.length > 1
+      ? [].concat.apply(
+          [],
+          data.datasets.map(d => d.data)
+        )
+      : data.datasets[0].data
 
   return (
     <Card className={styles.wrapper}>

@@ -3,7 +3,7 @@ import styles from './CalculateDropdown.module.scss'
 
 function getAvg(data) {
   const total = data.reduce((sum, number) => sum + number)
-  return total / data.length
+  return (total / data.length).toFixed(2)
 }
 function median(values) {
   if (values.length === 0) return 0

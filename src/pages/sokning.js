@@ -1,6 +1,7 @@
 import React from 'react'
 import LargeChart from '../components/LargeChart'
 import Grid from '../components/Grid'
+import SmallChart from '../components/SmallChart'
 
 const Sokning = () => {
   const sokere = {
@@ -63,19 +64,23 @@ const Sokning = () => {
     x: [2017, 2018, 2019]
   }
   return (
-    <Grid>
-      <LargeChart data={sokere} title="totalt antall søkere over tid" />
-      <LargeChart data={primary} title="antall primærsøkere per opptaksår" />
-      <LargeChart
-        data={gender}
-        title="Kjønnsofordeling for primærsøkere over tid"
-      />
-      <LargeChart
-        type="line"
-        data={andel}
-        title="andel primærsøkere av møtte studenter over tid"
-      />
-    </Grid>
+    <>
+      <SmallChart />
+      <SmallChart />
+      <Grid>
+        <LargeChart data={sokere} title="totalt antall søkere over tid" />
+        <LargeChart data={primary} title="antall primærsøkere per opptaksår" />
+        <LargeChart
+          data={gender}
+          title="Kjønnsofordeling for primærsøkere over tid"
+        />
+        <LargeChart
+          type="line"
+          data={andel}
+          title="andel primærsøkere av møtte studenter over tid"
+        />
+      </Grid>
+    </>
   )
 }
 

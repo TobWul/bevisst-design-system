@@ -25,7 +25,7 @@ function App() {
     'Søkning og opptak',
     'Lokale opptak',
     'Gjennomføring',
-    'Internasjonalisering',
+    'Utveksling',
     'Studiebarometeret'
   ]
   const [selectedPage, setSelectedPage] = useState(pages[0])
